@@ -35,9 +35,9 @@ namespace ClienteVentanas
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.btnConectar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelInicio.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +52,11 @@ namespace ClienteVentanas
             // 
             // panelInicio
             // 
+            this.panelInicio.Controls.Add(this.label1);
             this.panelInicio.Controls.Add(this.cbColor);
             this.panelInicio.Controls.Add(this.label3);
             this.panelInicio.Controls.Add(this.label2);
             this.panelInicio.Controls.Add(this.txtNombre);
-            this.panelInicio.Controls.Add(this.label1);
             this.panelInicio.Controls.Add(this.txtIP);
             this.panelInicio.Controls.Add(this.btnConectar);
             this.panelInicio.Location = new System.Drawing.Point(932, 12);
@@ -102,16 +102,6 @@ namespace ClienteVentanas
             this.txtNombre.Size = new System.Drawing.Size(125, 27);
             this.txtNombre.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "IP:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // txtIP
             // 
             this.txtIP.Location = new System.Drawing.Point(161, 17);
@@ -129,6 +119,15 @@ namespace ClienteVentanas
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = true;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(117, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "IP:";
             // 
             // Juego
             // 
@@ -150,7 +149,6 @@ namespace ClienteVentanas
 
         private System.Windows.Forms.Panel PanelTablero;
         private System.Windows.Forms.Panel panelInicio;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Label label3;
@@ -158,5 +156,6 @@ namespace ClienteVentanas
         
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cbColor;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -17,7 +17,42 @@ namespace ClienteVentanas
 {
     public partial class Juego : Form
     {
+        #region Variables de uso general
         PictureBox[,] matrizTablero = new PictureBox[10, 10];
+
+        struct datos
+        {
+            string nombre;
+            string color;
+            string nombreCarta;
+            string rotacionCarta; //0, 90, 180 ,270
+
+            string modenas1;
+            string modenas5;
+            string modenas10;
+
+        }
+
+        struct Carta
+        {
+            string nombreCarta;
+            string tipo;
+        }
+
+
+        //jugador
+        List<Carta> barajaMano = new List<Carta>();
+
+        List<Carta> pilasChozas = new List<Carta>();
+
+        //tablero
+        List<Carta> pilaSelva = new List<Carta>();
+
+        List<Carta> selvaExplorada = new List<Carta>();
+
+        #endregion
+
+
         public Juego()
         {
             InitializeComponent();
@@ -33,7 +68,12 @@ namespace ClienteVentanas
 
         }
 
-        //creacion y visualizacion de la matriz de picBox
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+            Conectar();
+        }
+
+        #region creacion y visualizacion de la matriz de picBox
         public void crearMatriz()
         {
          
@@ -83,14 +123,15 @@ namespace ClienteVentanas
             }
         }
 
-       public void pic_click(object sender, EventArgs evento)
+        public void pic_click(object sender, EventArgs evento)
         {
             PictureBox picb = sender as PictureBox;
             picb.Image = Image.FromFile("../../../Imagenes/piolin.png");
         }
+        #endregion
 
 
-        //conexion al server
+        #region conexion al server
         static private NetworkStream stream;
         static private StreamWriter writter;
         static private StreamReader reader;
@@ -109,8 +150,6 @@ namespace ClienteVentanas
                 catch { }
             }
         }
-
-
 
         public void Conectar()
         {
@@ -168,17 +207,20 @@ namespace ClienteVentanas
             writter.WriteLine(mensaje);
             writter.Flush();
         }
+        #endregion
 
-       
 
-        private void label1_Click(object sender, EventArgs e)
+        #region estructura inicial de juego
+
+        public void inicializarCartas()
         {
 
         }
 
-        private void btnConectar_Click(object sender, EventArgs e)
+        public void manoJugador()
         {
-            Conectar();
+
         }
+        #endregion
     }
 }
