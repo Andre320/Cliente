@@ -31,13 +31,14 @@ namespace ClienteVentanas
         {
             this.PanelTablero = new System.Windows.Forms.Panel();
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbColor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.btnConectar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelInicio.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,15 @@ namespace ClienteVentanas
             this.panelInicio.Name = "panelInicio";
             this.panelInicio.Size = new System.Drawing.Size(388, 239);
             this.panelInicio.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(117, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "IP:";
             // 
             // cbColor
             // 
@@ -120,20 +130,22 @@ namespace ClienteVentanas
             this.btnConectar.UseVisualStyleBackColor = true;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "IP:";
+            this.button1.Location = new System.Drawing.Point(1010, 327);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1882, 953);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.PanelTablero);
             this.Name = "Juego";
@@ -157,5 +169,6 @@ namespace ClienteVentanas
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cbColor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

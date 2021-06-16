@@ -20,7 +20,8 @@ namespace ClienteVentanas
         #region Variables de uso general
         PictureBox[,] matrizTablero = new PictureBox[10, 10];
 
-        struct datos
+        string colorJugador="";
+        public struct datos
         {
             string nombre;
             string color;
@@ -33,11 +34,14 @@ namespace ClienteVentanas
 
         }
 
-        struct Carta
+        public struct Carta
         {
-            string nombreCarta;
-            string tipo;
+            public string nombreCarta;
+            public string tipo;
         }
+
+       
+
 
 
         //jugador
@@ -49,6 +53,94 @@ namespace ClienteVentanas
         List<Carta> pilaSelva = new List<Carta>();
 
         List<Carta> selvaExplorada = new List<Carta>();
+
+
+
+
+        //generacion de las abarajas       
+        int tipoA = 4;
+        int tipoB= 5;
+        int tipoC=2;
+        
+        
+        int selva = 28;
+        Random rand = new Random((int)DateTime.Now.Ticks);
+
+        public void crearBarajaMano()
+        {
+
+            switch (colorJugador)
+            {
+                case "Amarillo":
+
+
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA !=0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Amarillo.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Amarillo.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Amarillo.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
+
+
+
+
+
+
+                    break;
+                case "Rojo":
+                   
+                    break;
+                case "Morado":
+                   
+                    break;
+                case "Blanco":
+                  
+                    break;
+                default:
+                    MessageBox.Show("problemas con el color seleccionado");
+                    break;
+            }
+
+
+
+
+
+
+        }
+        
+        
+
+
+
 
         #endregion
 
@@ -222,5 +314,17 @@ namespace ClienteVentanas
 
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            colorJugador = "Amarillo";
+            crearBarajaMano();
+            for(int c = 0; c < pilasChozas.Count; c++)
+            {
+                Debug.WriteLine("dato de la lista en la pos: "+c+" Nombre: "+pilasChozas[c].nombreCarta+ " Tipo: "+ pilasChozas[c].tipo);
+            }
+
+
+        }
     }
 }
