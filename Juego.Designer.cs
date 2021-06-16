@@ -31,7 +31,7 @@ namespace ClienteVentanas
         {
             this.PanelTablero = new System.Windows.Forms.Panel();
             this.panelInicio = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbColor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace ClienteVentanas
             // 
             // panelInicio
             // 
-            this.panelInicio.Controls.Add(this.comboBox1);
+            this.panelInicio.Controls.Add(this.cbColor);
             this.panelInicio.Controls.Add(this.label3);
             this.panelInicio.Controls.Add(this.label2);
             this.panelInicio.Controls.Add(this.txtNombre);
@@ -64,18 +64,18 @@ namespace ClienteVentanas
             this.panelInicio.Size = new System.Drawing.Size(388, 239);
             this.panelInicio.TabIndex = 2;
             // 
-            // comboBox1
+            // cbColor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbColor.FormattingEnabled = true;
+            this.cbColor.Items.AddRange(new object[] {
             "Rojo",
             "Amarillo",
             "Morado",
             "Blanco"});
-            this.comboBox1.Location = new System.Drawing.Point(161, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(125, 28);
-            this.comboBox1.TabIndex = 7;
+            this.cbColor.Location = new System.Drawing.Point(161, 117);
+            this.cbColor.Name = "cbColor";
+            this.cbColor.Size = new System.Drawing.Size(125, 28);
+            this.cbColor.TabIndex = 7;
             // 
             // label3
             // 
@@ -157,6 +157,6 @@ namespace ClienteVentanas
         private System.Windows.Forms.Label label2;
         
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbColor;
     }
 }

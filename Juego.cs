@@ -107,44 +107,53 @@ namespace ClienteVentanas
 
         public void Conectar()
         {
-            try
+            if (txtIP.Text.Trim() !="" && txtNombre.Text.Trim() != ""&& cbColor.SelectedItem.ToString().Trim() != "")
             {
-                
-                cliente.Connect(IPAddress.Parse(txtIP.Text), int.Parse("46000"));
-                if (cliente.Connected)
+                try
                 {
 
-                    PanelTablero.Visible = true;
-                    panelInicio.Visible = false;
-                    string color = "";
-                    string nombre =txtNombre.Text;
-                    string data = "Hola Mundo";
+                    cliente.Connect(IPAddress.Parse(txtIP.Text), int.Parse("46000"));
+                    if (cliente.Connected)
+                    {
 
-                    Debug.WriteLine("Conectado con exito");
+                        PanelTablero.Visible = true;
+                        panelInicio.Visible = false;
+                        string color = cbColor.SelectedItem.ToString();
+                        string nombre = txtNombre.Text;
+                        string data = "Hola Mundo";
 
-                    Thread thread = new Thread(Escuchar);
+                        Debug.WriteLine("Conectado con exito");
 
-                    stream = cliente.GetStream();
-                    writter = new StreamWriter(stream);
-                    reader = new StreamReader(stream);
+                        Thread thread = new Thread(Escuchar);
 
-                    writter.WriteLine(color);
-                    writter.WriteLine(nombre);
-                    writter.WriteLine(data);
+                        stream = cliente.GetStream();
+                        writter = new StreamWriter(stream);
+                        reader = new StreamReader(stream);
 
-                    writter.Flush();
+                        writter.WriteLine(color);
+                        writter.WriteLine(nombre);
+                        writter.WriteLine(data);
 
-                    thread.Start();
+                        writter.Flush();
 
+                        thread.Start();
+
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e);
+                    MessageBox.Show("se murio");
 
                 }
             }
-            catch(Exception e)
+            else
             {
-                Debug.WriteLine(e);
-                MessageBox.Show("se murio");
-                  
+                MessageBox.Show("no sea idiota y llene los datos");
             }
+
+            
         }
 
         public void Enviar(string mensaje)
