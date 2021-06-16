@@ -51,6 +51,7 @@ namespace ClienteVentanas
                     pic.Size = new Size(85,85);
                     pic.Location = new Point(posX,posY);
                     matrizTablero[i,j] = pic;
+                    pic.Click += new EventHandler(pic_click);
                     if (j == 9)
                     {
                         posX = 3;
@@ -80,6 +81,12 @@ namespace ClienteVentanas
 
               
             }
+        }
+
+       public void pic_click(object sender, EventArgs evento)
+        {
+            PictureBox picb = sender as PictureBox;
+            picb.Image = Image.FromFile("../../../Imagenes/piolin.png");
         }
 
 
