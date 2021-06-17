@@ -43,16 +43,16 @@ namespace ClienteVentanas
             this.panel1 = new System.Windows.Forms.Panel();
             this.picTableroJugador = new System.Windows.Forms.PictureBox();
             this.panelMano = new System.Windows.Forms.Panel();
-            this.picMano1 = new System.Windows.Forms.PictureBox();
-            this.picMano2 = new System.Windows.Forms.PictureBox();
             this.picMano3 = new System.Windows.Forms.PictureBox();
+            this.picMano2 = new System.Windows.Forms.PictureBox();
+            this.picMano1 = new System.Windows.Forms.PictureBox();
             this.panelInicio.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTableroJugador)).BeginInit();
             this.panelMano.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMano1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMano2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMano3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelTablero
@@ -73,15 +73,15 @@ namespace ClienteVentanas
             this.panelInicio.Controls.Add(this.txtNombre);
             this.panelInicio.Controls.Add(this.txtIP);
             this.panelInicio.Controls.Add(this.btnConectar);
-            this.panelInicio.Location = new System.Drawing.Point(932, 12);
+            this.panelInicio.Location = new System.Drawing.Point(12, 930);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(65, 43);
+            this.panelInicio.Size = new System.Drawing.Size(26, 28);
             this.panelInicio.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 17);
+            this.label1.Location = new System.Drawing.Point(51, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 20);
             this.label1.TabIndex = 8;
@@ -95,7 +95,7 @@ namespace ClienteVentanas
             "Amarillo",
             "Morado",
             "Blanco"});
-            this.cbColor.Location = new System.Drawing.Point(161, 117);
+            this.cbColor.Location = new System.Drawing.Point(95, 109);
             this.cbColor.Name = "cbColor";
             this.cbColor.Size = new System.Drawing.Size(125, 28);
             this.cbColor.TabIndex = 7;
@@ -103,7 +103,7 @@ namespace ClienteVentanas
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 117);
+            this.label3.Location = new System.Drawing.Point(27, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace ClienteVentanas
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 65);
+            this.label2.Location = new System.Drawing.Point(8, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 5;
@@ -120,14 +120,14 @@ namespace ClienteVentanas
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(161, 65);
+            this.txtNombre.Location = new System.Drawing.Point(95, 57);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(125, 27);
             this.txtNombre.TabIndex = 3;
             // 
             // txtIP
             // 
-            this.txtIP.Location = new System.Drawing.Point(161, 17);
+            this.txtIP.Location = new System.Drawing.Point(95, 9);
             this.txtIP.Name = "txtIP";
             this.txtIP.Size = new System.Drawing.Size(125, 27);
             this.txtIP.TabIndex = 1;
@@ -135,7 +135,7 @@ namespace ClienteVentanas
             // 
             // btnConectar
             // 
-            this.btnConectar.Location = new System.Drawing.Point(161, 187);
+            this.btnConectar.Location = new System.Drawing.Point(95, 179);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(94, 29);
             this.btnConectar.TabIndex = 0;
@@ -183,21 +183,22 @@ namespace ClienteVentanas
             // 
             // panelMano
             // 
+            this.panelMano.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMano.Controls.Add(this.picMano3);
             this.panelMano.Controls.Add(this.picMano2);
             this.panelMano.Controls.Add(this.picMano1);
             this.panelMano.Location = new System.Drawing.Point(1360, 498);
             this.panelMano.Name = "panelMano";
-            this.panelMano.Size = new System.Drawing.Size(510, 141);
+            this.panelMano.Size = new System.Drawing.Size(510, 148);
             this.panelMano.TabIndex = 6;
             // 
-            // picMano1
+            // picMano3
             // 
-            this.picMano1.Location = new System.Drawing.Point(3, 3);
-            this.picMano1.Name = "picMano1";
-            this.picMano1.Size = new System.Drawing.Size(162, 135);
-            this.picMano1.TabIndex = 0;
-            this.picMano1.TabStop = false;
+            this.picMano3.Location = new System.Drawing.Point(340, 3);
+            this.picMano3.Name = "picMano3";
+            this.picMano3.Size = new System.Drawing.Size(163, 135);
+            this.picMano3.TabIndex = 2;
+            this.picMano3.TabStop = false;
             // 
             // picMano2
             // 
@@ -207,13 +208,13 @@ namespace ClienteVentanas
             this.picMano2.TabIndex = 1;
             this.picMano2.TabStop = false;
             // 
-            // picMano3
+            // picMano1
             // 
-            this.picMano3.Location = new System.Drawing.Point(340, 3);
-            this.picMano3.Name = "picMano3";
-            this.picMano3.Size = new System.Drawing.Size(163, 135);
-            this.picMano3.TabIndex = 2;
-            this.picMano3.TabStop = false;
+            this.picMano1.Location = new System.Drawing.Point(3, 3);
+            this.picMano1.Name = "picMano1";
+            this.picMano1.Size = new System.Drawing.Size(162, 135);
+            this.picMano1.TabIndex = 0;
+            this.picMano1.TabStop = false;
             // 
             // Juego
             // 
@@ -234,9 +235,9 @@ namespace ClienteVentanas
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picTableroJugador)).EndInit();
             this.panelMano.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMano1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMano2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMano3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano1)).EndInit();
             this.ResumeLayout(false);
 
         }

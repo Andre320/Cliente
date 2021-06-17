@@ -90,6 +90,10 @@ namespace ClienteVentanas
             crearMatriz();
 
             mostrarMatrizTablero();
+
+            panelInicio.Size = new Size(240, 220);
+            panelInicio.Location = new Point(750,400);
+
         }
 
         private void Juego_Load(object sender, EventArgs e)
