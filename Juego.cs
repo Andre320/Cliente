@@ -61,179 +61,24 @@ namespace ClienteVentanas
         int tipoA = 4;
         int tipoB= 5;
         int tipoC=2;
-        
-        
-        int selva = 28;
+
+        int cacaoSimple=6;
+        int cacaoDoble=2;
+
+        int mercadoDoble = 2;
+        int mercadoTriple=4;
+        int mercadoCuatrodruple=1;
+
+        int minaSimple = 2;
+        int minaDoble=1;
+
+        int cenotes=3;
+        int centroCultoSolar = 2;
+        int templos=5;
+
         Random rand = new Random((int)DateTime.Now.Ticks);
 
-        public void crearBarajaMano()
-        {
-            switch (colorJugador)
-            {
-                case "Amarillo":
-                    for (int i = 0; i < 11; i++)
-                    {
-                        int randGenerado = rand.Next(0, 3);
-                        if (randGenerado == 0 && tipoA !=0)
-                        {
-                            Carta ctipoA;
-                            ctipoA.nombreCarta = "A_Amarillo.png";
-                            ctipoA.tipo = "Choza";
-
-                            tipoA--;
-                            pilasChozas.Add(ctipoA);
-                        }
-                        else if (randGenerado == 1 && tipoB != 0)
-                        {
-                            Carta ctipoB;
-                            ctipoB.nombreCarta = "B_Amarillo.png";
-                            ctipoB.tipo = "Choza";
-
-                            tipoB--;
-                            pilasChozas.Add(ctipoB);
-                        }
-                        else if (randGenerado == 2 && tipoC != 0)
-                        {
-                            Carta ctipoC;
-                            ctipoC.nombreCarta = "C_Amarillo.png";
-                            ctipoC.tipo = "Choza";
-
-                            tipoC--;
-                            pilasChozas.Add(ctipoC);
-                        }
-                        else
-                        {
-                            i--;
-                        }
-                    }
-                    break;
-                case "Rojo":
-                    for (int i = 0; i < 11; i++)
-                    {
-                        int randGenerado = rand.Next(0, 3);
-                        if (randGenerado == 0 && tipoA != 0)
-                        {
-                            Carta ctipoA;
-                            ctipoA.nombreCarta = "A_Rojo.png";
-                            ctipoA.tipo = "Choza";
-
-                            tipoA--;
-                            pilasChozas.Add(ctipoA);
-                        }
-                        else if (randGenerado == 1 && tipoB != 0)
-                        {
-                            Carta ctipoB;
-                            ctipoB.nombreCarta = "B_Rojo.png";
-                            ctipoB.tipo = "Choza";
-
-                            tipoB--;
-                            pilasChozas.Add(ctipoB);
-                        }
-                        else if (randGenerado == 2 && tipoC != 0)
-                        {
-                            Carta ctipoC;
-                            ctipoC.nombreCarta = "C_Rojo.png";
-                            ctipoC.tipo = "Choza";
-
-                            tipoC--;
-                            pilasChozas.Add(ctipoC);
-                        }
-                        else
-                        {
-                            i--;
-                        }
-                    }
-                    break;
-                case "Morado":
-                    for (int i = 0; i < 11; i++)
-                    {
-                        int randGenerado = rand.Next(0, 3);
-                        if (randGenerado == 0 && tipoA != 0)
-                        {
-                            Carta ctipoA;
-                            ctipoA.nombreCarta = "A_Morado.png";
-                            ctipoA.tipo = "Choza";
-
-                            tipoA--;
-                            pilasChozas.Add(ctipoA);
-                        }
-                        else if (randGenerado == 1 && tipoB != 0)
-                        {
-                            Carta ctipoB;
-                            ctipoB.nombreCarta = "B_Morado.png";
-                            ctipoB.tipo = "Choza";
-
-                            tipoB--;
-                            pilasChozas.Add(ctipoB);
-                        }
-                        else if (randGenerado == 2 && tipoC != 0)
-                        {
-                            Carta ctipoC;
-                            ctipoC.nombreCarta = "C_Morado.png";
-                            ctipoC.tipo = "Choza";
-
-                            tipoC--;
-                            pilasChozas.Add(ctipoC);
-                        }
-                        else
-                        {
-                            i--;
-                        }
-                    }
-                    break;
-                case "Blanco":
-                    for (int i = 0; i < 11; i++)
-                    {
-                        int randGenerado = rand.Next(0, 3);
-                        if (randGenerado == 0 && tipoA != 0)
-                        {
-                            Carta ctipoA;
-                            ctipoA.nombreCarta = "A_Blanco.png";
-                            ctipoA.tipo = "Choza";
-
-                            tipoA--;
-                            pilasChozas.Add(ctipoA);
-                        }
-                        else if (randGenerado == 1 && tipoB != 0)
-                        {
-                            Carta ctipoB;
-                            ctipoB.nombreCarta = "B_Blanco.png";
-                            ctipoB.tipo = "Choza";
-
-                            tipoB--;
-                            pilasChozas.Add(ctipoB);
-                        }
-                        else if (randGenerado == 2 && tipoC != 0)
-                        {
-                            Carta ctipoC;
-                            ctipoC.nombreCarta = "C_Blanco.png";
-                            ctipoC.tipo = "Choza";
-
-                            tipoC--;
-                            pilasChozas.Add(ctipoC);
-                        }
-                        else
-                        {
-                            i--;
-                        }
-                    }
-                    break;
-                default:
-                    MessageBox.Show("problemas con el color seleccionado");
-                    break;
-            }
-
-            for(int i = 0; i < 3; i++)
-            {
-                barajaMano.Add(pilasChozas.Last());
-                pilasChozas.RemoveAt(pilasChozas.Count-1);
-            }
-        }
         
-        
-        public void
-
-
 
         #endregion
 
@@ -397,21 +242,282 @@ namespace ClienteVentanas
 
         #region estructura inicial de juego
 
-        public void inicializarCartas()
+        public void crearBarajaMano()
         {
+            switch (colorJugador)
+            {
+                case "Amarillo":
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Amarillo.png";
+                            ctipoA.tipo = "Choza";
 
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Amarillo.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Amarillo.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
+                    break;
+                case "Rojo":
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Rojo.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Rojo.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Rojo.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
+                    break;
+                case "Morado":
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Morado.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Morado.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Morado.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
+                    break;
+                case "Blanco":
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Blanco.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Blanco.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Blanco.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
+                    break;
+                default:
+                    MessageBox.Show("problemas con el color seleccionado");
+                    break;
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                barajaMano.Add(pilasChozas.Last());
+                pilasChozas.RemoveAt(pilasChozas.Count - 1);
+            }
         }
 
-        public void manoJugador()
+        public void crearPilaSelva()
         {
 
+            for (int i = 0; i < 28; i++)
+            {
+                int randGenerado = rand.Next(0, 10);
+                if (randGenerado == 0 && cacaoSimple != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Plantacion_simple.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    cacaoSimple--;
+                }
+                else if (randGenerado == 1 && cacaoDoble != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Plantacion_doble.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    cacaoDoble--;
+                }
+                else if (randGenerado == 2 && mercadoDoble != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Mercado_2.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    mercadoDoble--;
+                }
+                else if (randGenerado == 3 && mercadoTriple != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Mercado_3.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    mercadoTriple--;
+                }
+                else if (randGenerado == 4 && mercadoCuatrodruple != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Mercado_4.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    mercadoCuatrodruple--;
+                }
+                else if (randGenerado == 5 && minaSimple != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Mina_1.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    minaSimple--;
+                }
+                else if (randGenerado == 6 && minaDoble != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Mina_2.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+
+                    minaDoble--;
+                }
+                else if (randGenerado == 7 && cenotes != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Cenote.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    cenotes--;
+                }
+                else if (randGenerado == 8 && centroCultoSolar != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Centro_culto_solar.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    centroCultoSolar--;
+                }
+                else if (randGenerado == 9 && templos != 0)
+                {
+                    Carta carta;
+                    carta.nombreCarta = "Templo.png";
+                    carta.tipo = "Selva";
+                    pilaSelva.Add(carta);
+
+                    templos--;
+                }
+                else
+                {
+                    i--;
+                }
+
+            }
         }
+
         #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
             colorJugador = "Rojo";
             crearBarajaMano();
+            
             for(int c = 0; c < pilasChozas.Count; c++)
             {
                 Debug.WriteLine("dato de la lista en la pos: "+c+" Nombre: "+pilasChozas[c].nombreCarta+ " Tipo: "+ pilasChozas[c].tipo);
@@ -421,7 +527,15 @@ namespace ClienteVentanas
             {
                 Debug.WriteLine("dato de la mano en la pos: " + j + " Nombre: " + barajaMano[j].nombreCarta + " Tipo: " + barajaMano[j].tipo);
             }
+            
+            Debug.WriteLine("#########################################################################################################");
 
+            crearPilaSelva();
+            
+            for (int c = 0; c < pilaSelva.Count; c++)
+            {
+                Debug.WriteLine("dato de la pila Selva en la pos: " + c + " Nombre: " + pilaSelva[c].nombreCarta + " Tipo: " + pilaSelva[c].tipo);
+            }
 
         }
     }

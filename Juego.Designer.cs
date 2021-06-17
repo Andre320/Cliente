@@ -40,7 +40,19 @@ namespace ClienteVentanas
             this.btnConectar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picTableroJugador = new System.Windows.Forms.PictureBox();
+            this.panelMano = new System.Windows.Forms.Panel();
+            this.picMano1 = new System.Windows.Forms.PictureBox();
+            this.picMano2 = new System.Windows.Forms.PictureBox();
+            this.picMano3 = new System.Windows.Forms.PictureBox();
             this.panelInicio.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTableroJugador)).BeginInit();
+            this.panelMano.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano3)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelTablero
@@ -63,7 +75,7 @@ namespace ClienteVentanas
             this.panelInicio.Controls.Add(this.btnConectar);
             this.panelInicio.Location = new System.Drawing.Point(932, 12);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(388, 239);
+            this.panelInicio.Size = new System.Drawing.Size(65, 43);
             this.panelInicio.TabIndex = 2;
             // 
             // label1
@@ -133,7 +145,7 @@ namespace ClienteVentanas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1010, 327);
+            this.button1.Location = new System.Drawing.Point(932, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 3;
@@ -143,18 +155,73 @@ namespace ClienteVentanas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1124, 327);
+            this.button2.Location = new System.Drawing.Point(1046, 323);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 4;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.picTableroJugador);
+            this.panel1.Location = new System.Drawing.Point(1264, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(606, 467);
+            this.panel1.TabIndex = 5;
+            // 
+            // picTableroJugador
+            // 
+            this.picTableroJugador.Image = global::ClienteVentanas.Properties.Resources.p;
+            this.picTableroJugador.Location = new System.Drawing.Point(21, 15);
+            this.picTableroJugador.Name = "picTableroJugador";
+            this.picTableroJugador.Size = new System.Drawing.Size(567, 436);
+            this.picTableroJugador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picTableroJugador.TabIndex = 0;
+            this.picTableroJugador.TabStop = false;
+            // 
+            // panelMano
+            // 
+            this.panelMano.Controls.Add(this.picMano3);
+            this.panelMano.Controls.Add(this.picMano2);
+            this.panelMano.Controls.Add(this.picMano1);
+            this.panelMano.Location = new System.Drawing.Point(1360, 498);
+            this.panelMano.Name = "panelMano";
+            this.panelMano.Size = new System.Drawing.Size(510, 141);
+            this.panelMano.TabIndex = 6;
+            // 
+            // picMano1
+            // 
+            this.picMano1.Location = new System.Drawing.Point(3, 3);
+            this.picMano1.Name = "picMano1";
+            this.picMano1.Size = new System.Drawing.Size(162, 135);
+            this.picMano1.TabIndex = 0;
+            this.picMano1.TabStop = false;
+            // 
+            // picMano2
+            // 
+            this.picMano2.Location = new System.Drawing.Point(171, 3);
+            this.picMano2.Name = "picMano2";
+            this.picMano2.Size = new System.Drawing.Size(163, 135);
+            this.picMano2.TabIndex = 1;
+            this.picMano2.TabStop = false;
+            // 
+            // picMano3
+            // 
+            this.picMano3.Location = new System.Drawing.Point(340, 3);
+            this.picMano3.Name = "picMano3";
+            this.picMano3.Size = new System.Drawing.Size(163, 135);
+            this.picMano3.TabIndex = 2;
+            this.picMano3.TabStop = false;
+            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1882, 953);
+            this.Controls.Add(this.panelMano);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelInicio);
@@ -164,6 +231,12 @@ namespace ClienteVentanas
             this.Load += new System.EventHandler(this.Juego_Load);
             this.panelInicio.ResumeLayout(false);
             this.panelInicio.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picTableroJugador)).EndInit();
+            this.panelMano.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMano1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMano3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +255,11 @@ namespace ClienteVentanas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox picTableroJugador;
+        private System.Windows.Forms.Panel panelMano;
+        private System.Windows.Forms.PictureBox picMano3;
+        private System.Windows.Forms.PictureBox picMano2;
+        private System.Windows.Forms.PictureBox picMano1;
     }
 }
