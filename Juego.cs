@@ -410,14 +410,14 @@ namespace ClienteVentanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            colorJugador = "Amarillo";
+            colorJugador = "Rojo";
             crearBarajaMano();
             for(int c = 0; c < pilasChozas.Count; c++)
             {
                 Debug.WriteLine("dato de la lista en la pos: "+c+" Nombre: "+pilasChozas[c].nombreCarta+ " Tipo: "+ pilasChozas[c].tipo);
             }
 
-            for (int j = 0; j< pilasChozas.Count; j++)
+            for (int j = 0; j<barajaMano.Count; j++)
             {
                 Debug.WriteLine("dato de la mano en la pos: " + j + " Nombre: " + barajaMano[j].nombreCarta + " Tipo: " + barajaMano[j].tipo);
             }
