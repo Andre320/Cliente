@@ -68,12 +68,9 @@ namespace ClienteVentanas
 
         public void crearBarajaMano()
         {
-
             switch (colorJugador)
             {
                 case "Amarillo":
-
-
                     for (int i = 0; i < 11; i++)
                     {
                         int randGenerado = rand.Next(0, 3);
@@ -109,32 +106,128 @@ namespace ClienteVentanas
                             i--;
                         }
                     }
-
-
-
-
-
-
                     break;
                 case "Rojo":
-                   
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Rojo.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Rojo.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Rojo.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
                     break;
                 case "Morado":
-                   
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Morado.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Morado.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Morado.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
                     break;
                 case "Blanco":
-                  
+                    for (int i = 0; i < 11; i++)
+                    {
+                        int randGenerado = rand.Next(0, 3);
+                        if (randGenerado == 0 && tipoA != 0)
+                        {
+                            Carta ctipoA;
+                            ctipoA.nombreCarta = "A_Blanco.png";
+                            ctipoA.tipo = "Choza";
+
+                            tipoA--;
+                            pilasChozas.Add(ctipoA);
+                        }
+                        else if (randGenerado == 1 && tipoB != 0)
+                        {
+                            Carta ctipoB;
+                            ctipoB.nombreCarta = "B_Blanco.png";
+                            ctipoB.tipo = "Choza";
+
+                            tipoB--;
+                            pilasChozas.Add(ctipoB);
+                        }
+                        else if (randGenerado == 2 && tipoC != 0)
+                        {
+                            Carta ctipoC;
+                            ctipoC.nombreCarta = "C_Blanco.png";
+                            ctipoC.tipo = "Choza";
+
+                            tipoC--;
+                            pilasChozas.Add(ctipoC);
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                    }
                     break;
                 default:
                     MessageBox.Show("problemas con el color seleccionado");
                     break;
             }
 
-
-
-
-
-
+            for(int i = 0; i < 3; i++)
+            {
+                barajaMano.Add(pilasChozas.Last());
+                pilasChozas.RemoveAt(pilasChozas.Count-1);
+            }
         }
         
         
@@ -322,6 +415,11 @@ namespace ClienteVentanas
             for(int c = 0; c < pilasChozas.Count; c++)
             {
                 Debug.WriteLine("dato de la lista en la pos: "+c+" Nombre: "+pilasChozas[c].nombreCarta+ " Tipo: "+ pilasChozas[c].tipo);
+            }
+
+            for (int j = 0; j< pilasChozas.Count; j++)
+            {
+                Debug.WriteLine("dato de la mano en la pos: " + j + " Nombre: " + barajaMano[j].nombreCarta + " Tipo: " + barajaMano[j].tipo);
             }
 
 
