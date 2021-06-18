@@ -40,9 +40,6 @@ namespace ClienteVentanas
             public string tipo;
         }
 
-       
-
-
 
         //jugador
         List<Carta> barajaMano = new List<Carta>();
@@ -53,8 +50,6 @@ namespace ClienteVentanas
         List<Carta> pilaSelva = new List<Carta>();
 
         List<Carta> selvaExplorada = new List<Carta>();
-
-
 
 
         //generacion de las abarajas       
@@ -108,6 +103,7 @@ namespace ClienteVentanas
         }
 
         #region creacion y visualizacion de la matriz de picBox
+
         public void crearMatriz()
         {
          
@@ -162,6 +158,7 @@ namespace ClienteVentanas
             PictureBox picb = sender as PictureBox;
             picb.Image = Image.FromFile("../../../Imagenes/piolin.png");
         }
+
         #endregion
 
 
@@ -408,6 +405,17 @@ namespace ClienteVentanas
                 barajaMano.Add(pilasChozas.Last());
                 pilasChozas.RemoveAt(pilasChozas.Count - 1);
             }
+
+            cargarMano();
+        }
+
+        public void cargarMano()
+        {
+
+            picMano1.Image = Image.FromFile("../../../Imagenes/" + barajaMano[0].nombreCarta);
+            picMano2.Image = Image.FromFile("../../../Imagenes/" + barajaMano[1].nombreCarta);
+            picMano3.Image = Image.FromFile("../../../Imagenes/" + barajaMano[2].nombreCarta);
+        
         }
 
         public void crearPilaSelva()
@@ -517,9 +525,12 @@ namespace ClienteVentanas
 
         #endregion
 
+
         private void button1_Click(object sender, EventArgs e)
         {
+
             colorJugador = "Rojo";
+
             crearBarajaMano();
             
             for(int c = 0; c < pilasChozas.Count; c++)
@@ -540,7 +551,7 @@ namespace ClienteVentanas
             {
                 Debug.WriteLine("dato de la pila Selva en la pos: " + c + " Nombre: " + pilaSelva[c].nombreCarta + " Tipo: " + pilaSelva[c].tipo);
             }
-
+            
         }
     }
 }

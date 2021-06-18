@@ -145,7 +145,7 @@ namespace ClienteVentanas
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(932, 323);
+            this.button1.Location = new System.Drawing.Point(990, 319);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 3;
@@ -155,7 +155,7 @@ namespace ClienteVentanas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1046, 323);
+            this.button2.Location = new System.Drawing.Point(1104, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 4;
@@ -173,7 +173,6 @@ namespace ClienteVentanas
             // 
             // picTableroJugador
             // 
-            this.picTableroJugador.Image = global::ClienteVentanas.Properties.Resources.p;
             this.picTableroJugador.Location = new System.Drawing.Point(21, 15);
             this.picTableroJugador.Name = "picTableroJugador";
             this.picTableroJugador.Size = new System.Drawing.Size(567, 436);
@@ -197,6 +196,7 @@ namespace ClienteVentanas
             this.picMano3.Location = new System.Drawing.Point(340, 3);
             this.picMano3.Name = "picMano3";
             this.picMano3.Size = new System.Drawing.Size(163, 135);
+            this.picMano3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMano3.TabIndex = 2;
             this.picMano3.TabStop = false;
             // 
@@ -205,6 +205,7 @@ namespace ClienteVentanas
             this.picMano2.Location = new System.Drawing.Point(171, 3);
             this.picMano2.Name = "picMano2";
             this.picMano2.Size = new System.Drawing.Size(163, 135);
+            this.picMano2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMano2.TabIndex = 1;
             this.picMano2.TabStop = false;
             // 
@@ -213,6 +214,7 @@ namespace ClienteVentanas
             this.picMano1.Location = new System.Drawing.Point(3, 3);
             this.picMano1.Name = "picMano1";
             this.picMano1.Size = new System.Drawing.Size(162, 135);
+            this.picMano1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMano1.TabIndex = 0;
             this.picMano1.TabStop = false;
             // 
